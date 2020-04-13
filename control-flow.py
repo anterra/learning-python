@@ -24,7 +24,7 @@ print("Done")
 #while
 #allows you to repeatedly execute block of statements as long as a condition is true
 #looping statement
-#can have an optional else clause
+#can have optional else clause
 
 number = 23
 running = True
