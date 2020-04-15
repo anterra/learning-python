@@ -4,7 +4,7 @@ def print_max(x, y):
         """Prints the maximum of two numbers.
 
         The two values must be integers."""
-        #convert to integers, in possible
+        #convert to integers, if possible
         x = int(x)
         y = int(y)
 
@@ -13,5 +13,7 @@ def print_max(x, y):
         else:
             print(y, "is maximum")
 
-print_max(3, 5) 
+print_max(3, 5)
 print(print_max.__doc__)
+
+#a string on the first logical line of a function is the docstring of that function
