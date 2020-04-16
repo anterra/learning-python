@@ -1,7 +1,7 @@
 #problem: create program that creates backups of important files
 
 #design: 1. files/directories to be backed up should be specified in a list
-#2. backup msut be stored in a main backup directory
+#2. backup must be stored in a main backup directory
 #3. files are backed up into a zip file
 #4. name of the zip archive is the current date and time
 #5. use zip command (note: since running windows I am using 3rd party 7zip,
@@ -44,14 +44,15 @@ if os.system(zip_command) == 0: #os.system runs command as if it was run from th
 else:
     print("Backup FAILED")
 
-#this program works successfully when executed from command line, because cmd has access to 7-Zip
-#(to make 7z executable from anywhere in cmd (not just inside 7-Zip folder), had to use:
+#this program runs successfully and creates backup zip drive when executed from command line
+#IF the following command is executed first to make 7z executable from anywhere in cmd (not just inside 7-Zip folder):
 
 #set PATH=%PATH%;C:\Program Files\7-Zip
 #echo %PATH%
 #7z
 
-#but, can't make it execute inside Pycharm where 7z is not recognized...
+
+#but, can't make this program execute inside Pycharm where 7z is not recognized...
 #have to get Pycharm to recognize and reference 7z.exe
 #tried adding as an external tool. no success.
 #trying to use os.system to execute 7z from inside 7-Zip folder "in shell" then echo
