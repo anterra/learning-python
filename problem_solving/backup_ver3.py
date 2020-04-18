@@ -32,7 +32,8 @@ if not os.path.exists(today):
     os.mkdir(today)
     print("Successfully created directory", today)
 
-#a solution found on the internet:
+#a solution found on the internet for getting files out a directory:
+#because using ZipFile I need to iterate over and add each file, not just add entire folder to zip as before
 def get_file_paths(directory):
     file_paths = []
     for root, directories, files in os.walk(directory):
@@ -51,3 +52,8 @@ with ZipFile(target, "w") as zip: #w = write mode
         zip.write(file)
     print("Files backed up")
 
+#just want to really clear on what the get_file_paths function is doing
+#creating a list
+#os.walk generates file names in a directory tree -- yields two lists, files and dirs
+#also this creates folders Users -> Anterra -> FileToBackUp --> then all the acutal photos inside the zip folder
+#instead of just the files
