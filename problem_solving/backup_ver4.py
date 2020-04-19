@@ -1,10 +1,11 @@
-#adding update: simpler way of getting files out of source
+#future update: simpler way of getting files out of source?
+#I will revisit this at a later date
 
 import os
 import time
 from zipfile import ZipFile
 
-source = r"C:\Users\Anterra\FilesToBackUp"
+source = [r"C:\Users\Anterra\FilesToBackUp"]
 
 target_dir = r"C:\Users\Anterra\BackUp"
 
@@ -24,16 +25,16 @@ if not os.path.exists(today):
     os.mkdir(today)
     print("Successfully created directory", today)
 
-file_list = os.listdir(source) #list all the files in a directory
-file_paths = os.path(file_list)
-print(file_paths)
+file_list = os.listdir(" ".join(source)) #list all the files in a directory
+#file_paths = os.path(" ".join(os.listdir(" ".join(source))))
+#print(file_paths)
 
 with ZipFile(target, "w") as zip: #w = write mode
     print("{} is created".format(target))
     print("These files will be zipped:")
     for each_file in file_list:
         print(each_file)
-    for each_file in file_list: #need to be given paths, not a list
+    for each_file in file_list: #needs to iterate over file paths, not a list of just file names
         zip.write(each_file)
     print("Files backed up")
 

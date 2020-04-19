@@ -47,7 +47,7 @@ with ZipFile(target, "w") as zip: #w = write mode
     print("These files will be zipped:")
     file_paths = get_file_paths(" ".join(source))
     for file_name in file_paths:
-        print(file_name)
+        print(file_name) #the files that get zipped are entire directories...
     for file in file_paths:
         zip.write(file)
     print("Files backed up")
