@@ -40,3 +40,7 @@ if is_palindrome(something):
 else:
     print("No, it is not a palindrome.")
 
+#also note about structure of programs:
+#defining the whole set of functions first
+#then finally asking user for input dependent on the other functions above
+#rather than taking input first and then cascading that input down functions underneath
