@@ -1,5 +1,5 @@
 def reverse(text):
-    return text[::-1]
+    return text[::-1] #slicing function. arguments are start stop step count. -1 returns text in reverse
 
 def is_palindrome(text):
     return text == reverse(text)
