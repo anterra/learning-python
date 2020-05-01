@@ -16,7 +16,7 @@ f.close()
 #destroy the shoplist variable
 del shoplist
 
-#read back from the storagee
+#read back from the storage
 f = open(shoplistfile, "rb")
 #load the object from the file
 storedlist = pickle.load(f) #unpickling
